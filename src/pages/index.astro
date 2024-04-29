@@ -3,8 +3,222 @@ import Layout from "../layouts/Layout.astro";
 import "@/styles/globals.css";
 ---
 
-<Layout title="Welcome to Astro.">
-  <main></main>
+<Layout title="Social media dashboard with theme switcher">
+  <main>
+    <section
+      class="mb-[2.75rem] ml-[1.56rem] mr-6 mt-9 flex flex-col gap-[2.75rem] xl:mx-[10.31rem] xl:mb-[2.88rem] xl:flex-row xl:items-center xl:justify-between xl:gap-[40.37rem]"
+    >
+      <div
+        class="relative flex flex-col gap-1 after:absolute after:-bottom-6 after:h-[0.0625rem] after:w-[20.375rem] after:bg-[#848BAB] xl:after:hidden dark:after:bg-[#333A55]"
+      >
+        <h1
+          class="text-2xl font-bold leading-normal text-[#1D1F29] xl:text-[1.75rem] dark:text-[#fff]"
+        >
+          Social Media Dashboard
+        </h1>
+        <h2
+          class="text-sm font-bold leading-normal text-[#63687D] dark:text-[#8C98C6]"
+        >
+          Total Followers: 23,004
+        </h2>
+      </div>
+      <div
+        class="flex items-center justify-between gap-[12.69rem] xl:gap-[0.81rem]"
+      >
+        <h3
+          class="text-sm font-bold leading-normal text-[#63687D] dark:text-[#8C98C6]"
+        >
+          Dark Mode
+        </h3>
+        <label for="checkboxBtn">
+          <input type="checkbox" class="" id="checkboxBtn" />
+          <span class="circleBtn"></span>
+        </label>
+      </div>
+    </section>
+    <section
+      class="ml-[1.56rem] mr-6 flex flex-col gap-y-6 xl:mx-[10.31rem] xl:flex-row xl:gap-x-[1.88rem]"
+    >
+      <!-- First Box / FaceBook @nathanf -->
+      <div
+        class="facebookBox flex h-[13.5rem] w-[20.375rem] flex-col items-center justify-center rounded-[0.3125rem] bg-[#F1F3FA] pb-6 pt-8 text-center xl:w-[15.9375rem] dark:bg-[#252B42]"
+      >
+        <!-- Icon & Name  -->
+        <div class="flex items-center justify-between gap-2 pb-[1.88rem]">
+          <img
+            src="/public/images/icon-facebook.svg"
+            alt="iconFacebbok"
+            class=""
+          />
+          <h3
+            class="text-xs font-bold leading-normal text-[#63687D] dark:text-[#8C98C6]"
+          >
+            @nathanf
+          </h3>
+        </div>
+        <!-- Numbers Of Followers -->
+        <div class="flex flex-col items-center gap-[0.56rem] pb-[1.56rem]">
+          <h2
+            class="text-[3.5rem] font-bold leading-[3rem] tracking-[-0.125rem] text-[#1D1F29] dark:text-[#fff]"
+          >
+            1987
+          </h2>
+          <h3
+            class="text-xs font-normal uppercase leading-normal tracking-[0.3125rem] text-[#63687D] dark:text-[#8C98C6]"
+          >
+            Followers
+          </h3>
+        </div>
+        <!-- Today's Followers  -->
+        <div class="flex items-center justify-between gap-1">
+          <img src="/public/images/icon-up.svg" alt="" class="" />
+          <h3 class="text-sx font-bold leading-normal text-[#1EB589]">
+            12 Today
+          </h3>
+        </div>
+      </div>
+      <!-- Second Box / Twitter @nathanf -->
+      <div
+        class="twitterBox flex h-[13.5rem] w-[20.375rem] flex-col items-center justify-center rounded-[0.3125rem] bg-[#F1F3FA] pb-6 pt-8 text-center xl:w-[15.9375rem] dark:bg-[#252B42]"
+      >
+        <!-- Icon & Name  -->
+        <div class="flex items-center justify-between gap-2 pb-[1.88rem]">
+          <img
+            src="/public/images/icon-twitter.svg"
+            alt="iconTwitter"
+            class=""
+          />
+          <h3
+            class="text-xs font-bold leading-normal text-[#63687D] dark:text-[#8C98C6]"
+          >
+            @nathanf
+          </h3>
+        </div>
+        <!-- Numbers Of Followers -->
+        <div class="flex flex-col items-center gap-[0.56rem] pb-[1.56rem]">
+          <h2
+            class="text-[3.5rem] font-bold leading-[3rem] tracking-[-0.125rem] text-[#1D1F29] dark:text-[#fff]"
+          >
+            1044
+          </h2>
+          <h3
+            class="text-xs font-normal uppercase leading-normal tracking-[0.3125rem] text-[#63687D] dark:text-[#8C98C6]"
+          >
+            Followers
+          </h3>
+        </div>
+        <!-- Today's Followers  -->
+        <div class="flex items-center justify-between gap-1">
+          <img src="/public/images/icon-up.svg" alt="" class="" />
+          <h3 class="text-sx font-bold leading-normal text-[#1EB589]">
+            99 Today
+          </h3>
+        </div>
+      </div>
+      <!-- Third Box / Instagram @realnathanf -->
+      <div
+        class="instagramBox flex h-[13.5rem] w-[20.375rem] flex-col items-center justify-center rounded-[0.3125rem] bg-[#F1F3FA] pb-6 pt-8 text-center xl:w-[15.9375rem] dark:bg-[#252B42]"
+      >
+        <!-- Icon & Name  -->
+        <div class="flex items-center justify-between gap-2 pb-[1.88rem]">
+          <img
+            src="/public/images/icon-instagram.svg"
+            alt="iconInstagram"
+            class=""
+          />
+          <h3
+            class="text-xs font-bold leading-normal text-[#63687D] dark:text-[#8C98C6]"
+          >
+            @realnathanf
+          </h3>
+        </div>
+        <!-- Numbers Of Followers -->
+        <div class="flex flex-col items-center gap-[0.56rem] pb-[1.56rem]">
+          <h2
+            class="text-[3.5rem] font-bold leading-[3rem] tracking-[-0.125rem] text-[#1D1F29] dark:text-[#fff]"
+          >
+            11K
+          </h2>
+          <h3
+            class="text-xs font-normal uppercase leading-normal tracking-[0.3125rem] text-[#63687D] dark:text-[#8C98C6]"
+          >
+            Followers
+          </h3>
+        </div>
+        <!-- Today's Followers  -->
+        <div class="flex items-center justify-between gap-1">
+          <img src="/public/images/icon-up.svg" alt="" class="" />
+          <h3 class="text-sx font-bold leading-normal text-[#1EB589]">
+            1099 Today
+          </h3>
+        </div>
+      </div>
+      <!--  Fourth Box / YouTube Nathan F. -->
+      <div
+        class="youtubeBox flex h-[13.5rem] w-[20.375rem] flex-col items-center justify-center rounded-[0.3125rem] bg-[#F1F3FA] pb-6 pt-8 text-center xl:w-[15.9375rem] dark:bg-[#252B42]"
+      >
+        <!-- Icon & Name  -->
+        <div class="flex items-center justify-between gap-2 pb-[1.88rem]">
+          <img
+            src="/public/images/icon-youtube.svg"
+            alt="iconYouTube"
+            class=""
+          />
+          <h3
+            class="text-xs font-bold leading-normal text-[#63687D] dark:text-[#8C98C6]"
+          >
+            Nathan F.
+          </h3>
+        </div>
+        <!-- Numbers Of Followers -->
+        <div class="flex flex-col items-center gap-[0.56rem] pb-[1.56rem]">
+          <h2
+            class="text-[3.5rem] font-bold leading-[3rem] tracking-[-0.125rem] text-[#1D1F29] dark:text-[#fff]"
+          >
+            8239
+          </h2>
+          <h3
+            class="text-xs font-normal uppercase leading-normal tracking-[0.3125rem] text-[#63687D] dark:text-[#8C98C6]"
+          >
+            SUBSCRIBERS
+          </h3>
+        </div>
+        <!-- Today's Followers  -->
+        <div class="flex items-center justify-between gap-1">
+          <img src="/public/images/icon-down.svg" alt="" class="" />
+          <h3 class="text-sx font-bold leading-normal text-[#DC414C]">
+            144 Today
+          </h3>
+        </div>
+      </div>
+    </section>
+  </main>
 </Layout>
 
-<style></style>
+<style>
+  :root {
+    --instgram: linear-gradient(225deg, #df4896, #ee877e, #fdc366);
+  }
+
+  .youtubeBox {
+    border-top: 0.25rem solid #c4032b;
+  }
+  .instagramBox {
+    border-top: 0.25rem solid var(--instgram);
+  }
+  .facebookBox,
+  .twitterBox {
+    border-top: 0.25rem solid #1da1f2;
+  }
+</style>
+
+<script is:inline>
+  // checked toogle darkmood
+  const checkboxBtn = document.getElementById("checkboxBtn");
+  const body = document.body;
+  if (checkboxBtn) {
+    checkboxBtn.addEventListener("click", () => {
+      body.classList.toggle("dark");
+    });
+  }
+</script>
