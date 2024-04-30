@@ -14,8 +14,8 @@ This is a solution to the [Social media dashboard with theme switcher challenge 
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://github.com/Youmnaelzany/social-media-dashboard-with-theme-switcher-29-4-24.git)
+- Live Site URL: [Add live site URL here](https://socailmediadashboard294.netlify.app/)
 
 ### Built with
 
