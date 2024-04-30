@@ -5,8 +5,9 @@ import "@/styles/globals.css";
 
 <Layout title="Social media dashboard with theme switcher">
   <main>
-    <section
-      class="mb-[2.75rem] ml-[1.56rem] mr-6 mt-9 flex flex-col gap-[2.75rem] xl:mx-[10.31rem] xl:mb-[2.88rem] xl:flex-row xl:items-center xl:justify-between xl:gap-[40.37rem]"
+    <!-- Title & MOOD Switcher -->
+    <div
+      class="mb-[2.75rem] ml-[1.56rem] mr-6 mt-9 flex flex-col gap-[2.75rem] xl:mx-[10.31rem] xl:mb-[2.88rem] xl:flex-row xl:items-center xl:justify-between xl:gap-[37.37rem]"
     >
       <div
         class="relative flex flex-col gap-1 after:absolute after:-bottom-6 after:h-[0.0625rem] after:w-[20.375rem] after:bg-[#848BAB] xl:after:hidden dark:after:bg-[#333A55]"
@@ -30,12 +31,21 @@ import "@/styles/globals.css";
         >
           Dark Mode
         </h3>
-        <label for="checkboxBtn">
-          <input type="checkbox" class="" id="checkboxBtn" />
-          <span class="circleBtn"></span>
-        </label>
+        <div
+          class="checkBox relative h-6 w-12 rounded-2xl bg-[#AEB3CB] dark:bg-[#3cb7b2]"
+        >
+          <label class="toggleBox cursor-pointer">
+            <input type="checkbox" class="hidden" id="checkboxBtn" />
+            <div
+              class="circleBtn absolute left-1 top-[4px] h-4 w-4 rounded-full bg-[#fff] transition-all duration-500 ease-linear dark:bg-[#252B42]"
+              id="circleBtn"
+            >
+            </div>
+          </label>
+        </div>
       </div>
-    </section>
+    </div>
+    <!-- Social Media Dashboard -->
     <section
       class="mb-[2.87rem] ml-[1.56rem] mr-6 flex flex-col gap-y-6 xl:mx-[10.31rem] xl:flex-row xl:gap-x-[1.88rem]"
     >
@@ -176,6 +186,7 @@ import "@/styles/globals.css";
         </div>
       </div>
     </section>
+    <!-- Overview - Toady -->
     <section
       class="mb-[2.81rem] ml-[1.56rem] mr-6 flex flex-col gap-[1.69rem] xl:mx-[10.31rem] xl:mb-[4.69rem] xl:gap-6"
     >
@@ -467,14 +478,11 @@ import "@/styles/globals.css";
 </Layout>
 
 <style>
-  :root {
-    --instgram: linear-gradient(225deg, #df4896, #ee877e, #fdc366);
-  }
   .youtubeBox {
     border-top: 0.25rem solid #c4032b;
   }
   .instagramBox {
-    border-top: 0.25rem solid var(--instgram);
+    border-top: 0.25rem solid #fdc366;
   }
   .facebookBox,
   .twitterBox {
@@ -483,12 +491,21 @@ import "@/styles/globals.css";
 </style>
 
 <script is:inline>
-  // checked toogle darkmood
-  const checkboxBtn = document.getElementById("checkboxBtn");
-  const body = document.body;
-  if (checkboxBtn) {
-    checkboxBtn.addEventListener("click", () => {
-      body.classList.toggle("dark");
-    });
-  }
+  const circleBtn = document.querySelector(".circleBtn");
+  const body = document.querySelector("body");
+  const checkboxBtn = document.querySelector("#checkboxBtn");
+
+  checkboxBtn.addEventListener("change", (event) => {
+    if (event.target.checked) {
+      circleBtn.classList.add("dark");
+      circleBtn.style.left = "0.25rem";
+      circleBtn.style.removeProperty("right");
+      body.classList.add("dark");
+    } else {
+      circleBtn.classList.remove("dark");
+      circleBtn.style.right = "0.25rem";
+      circleBtn.style.removeProperty("left");
+      body.classList.remove("dark");
+    }
+  });
 </script>
